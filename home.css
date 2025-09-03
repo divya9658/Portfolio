@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgba(139, 115, 227, 0.256);
+    padding: 30px 20px;
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Namelogo{
+    font-family: cursive;
+    font-size: 26px;
+}
+.nav-links{
+    display: flex;
+}
+.nav-links ul{
+    display: flex;
+    justify-content: end;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    transition: background-color 0.1s linear;
+    border-radius: 40px;
+}
+.nav-links ul li a:hover{
+    background-color: blueviolet;
+    color: white;
+}
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+span{
+    display: none;
+    font-size: 24px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+}
+.content, .image1{
+    width: 100%;
+    height: 100%;
+}
+.image1{
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/image1_girl.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+}
+.content h1{
+    font-size: 46px;
+    color:rgb(79, 20, 135);
+    font-family: 'Montserrat', sans-serif;
+}
+.content p{
+    color: rgba(0, 0, 0, 0.627);
+    line-height: 2;
+}
+.content ul{
+    display: flex;
+    gap: 30px;
+    font-size:30px;
+}
+@media (max-width: 770px){
+    .Namelogo{
+        display: block;
+        font-size: clamp(1.2rem, 3vw, 3rem);
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right:-350px;
+        top:0px;
+        width:300px;
+        height: 100svh;
+        background-color: rgb(203, 172, 231);
+        padding: 15px 30px;
+        transition: right 0.4s ease-out;
+        border-radius: 8px 0 0 8px;
+        z-index:1000;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .nav-links ul li a{
+        border-radius: 10px;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 30px;
+        text-align: end;
+        cursor: pointer;
+    }
+    span{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .image1{
+        height: 400px;
+    }
+}
