@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
+    <section onmousemove="fun(event)">
+    <div class="c" id="circle">
+      <div class="sc"></div>
+    </div>
     <section class="header">
       <div class="Namelogo">&lt; Divyateja Konathala /&gt;</div>
       <nav class="nav-links" id="nav-links">
@@ -43,7 +47,19 @@
         <div class="image1"></div>
       </div>
     </section>
+    <section class="About">
+        
+    </section>
+    </section>
     <script>
+      function fun(event){
+        console.log(event);
+        const Circle = document.getElementById("circle");
+        const x = event.clientX;
+        const y = event.clientY;
+        Circle.style.left = (x-25) + "px";
+        Circle.style.top = (y-25) + "px";
+      }
       function Open(){
         document.getElementsByClassName("nav-links")[0].style="right:0px;";
       }

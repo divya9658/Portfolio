@@ -7,6 +7,29 @@
 body{
     background-color: rgba(139, 115, 227, 0.256);
     padding: 30px 20px;
+    cursor: none;
+}
+section{
+    overflow: hidden;
+    position: relative;
+}
+.c,.sc{
+    position: absolute;
+}
+.c{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid rgb(156, 94, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sc{
+    width:1px;
+    height: 1px;
+    border-radius: 50%;
+    border: 5px solid rgb(144, 90, 195);
 }
 .header{
     position: relative;
