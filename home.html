@@ -27,6 +27,7 @@
       <div class="grid-container">
         <div class="content">
           <h1>Divyateja Konathala</h1>
+          <h3>(Undergraduate Student)</h3>
           <p>I am an enthusiastic undergraduate student
             with a strong foundation in core subjects and growing exposure to practical applications.
             I'm eager to learn continuously, work on real-world projects, and explore opportunities that help me 
@@ -40,24 +41,88 @@
             <li><a href="#"></a><i class="fab fa-facebook"></i></li>
           </ul>
         </div>
-        <div class="image1"></div>
+        <div class="image">
+          <div class="image1">
+            <img src="./images/New_Image.jpg" alt="">
+          </div>
+        </div>
       </div>
     </section>
     <section class="About">
-        <h1>About Me</h1>
         <div class="grid-container">
-          <div class="content"></div>
-          <div class="image2"></div>
-        </div>
-        <div class="grid-container">
-          <div class="image3"></div>
-          <div class="content"></div>
-        </div>
-        <div class="grid-container">
-          <div class="content"></div>
-          <div class="image4"></div>
+          <div class="image2">
+              <img src="./images/image1_girl.png" alt="" class="img">
+          </div>
+          <div class="content1">
+            <h1>About Me</h1>
+            <p>Hi, I’m Divyateja, an undergraduate student at Aditya College of Engineering and Technology pursuing a degree in Computer Science. I enjoy solving problems through code and have a keen interest in web development and data structures. 
+            I’ve worked on projects like building a personal portfolio website and creating an interaction website.My technical skills include HTML, CSS, JavaScript, Python, and SQL, along with a growing interest in UI/UX design. I thrive on learning new tools and applying them to real-world problems. 
+            My long-term goal is to become a full-stack developer and contribute to projects that make technology more accessible.</p>
+          </div>
         </div>
     </section>
+    <section class="Skills">
+      <h1 class="skill-head">Skills</h1>
+      <div class="grid-container1">
+          <div class="s">
+            <div class="languages">
+              <img src="./images/HTML.png" alt="">
+            </div>
+            <div class="text">HTML</div>
+          </div>
+          <div class="s">
+            <div class="language1">
+              <img src="./images/CSS.png" alt="">
+            </div>
+            <div class="text">CSS</div>
+          </div>
+          <div class="s">
+            <div class="language2">
+              <img src="./images/JS.png" alt="">
+            </div>
+            <div class="text">JavaScript</div>
+          </div>
+          <div class="s">
+            <div class="language3">
+              <img src="./images/C.png" alt="">
+            </div>
+            <div class="text">C</div>
+          </div>
+          <div class="s">
+            <div class="language4">
+              <img src="./images/C++.png" alt="">
+            </div>
+            <div class="text">C++</div>
+          </div>
+          <div class="s">
+            <div class="language4">
+              <img src="./images/JAVA.png" alt="">
+            </div>
+            <div class="text">Java</div>
+          </div>
+          <div class="s">
+            <div class="languages">
+              <img src="./images/PYTHON.png" alt="">
+            </div>
+            <div class="text">Python</div>
+          </div>
+          <div class="s">
+            <div class="language1">
+              <img src="./images/DSA.png" alt="">
+            </div>
+            <div class="text">DSA</div>
+          </div>
+          <div class="s">
+            <div class="language5">
+              <img src="./images/SQL.png" alt="">
+            </div>
+            <div class="text">SQL</div>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <p>Made with ❤️ by Divyateja</p>
+    </footer>
     <script>
       function fun(event){
         console.log(event);
@@ -73,6 +138,16 @@
       function Close(){
         document.getElementsByClassName("nav-links")[0].style="right:-350px;";
       }
+      window.addEventListener("scroll", function (){
+        const boxes = document.querySelectorAll(".About");
+        boxes.forEach((box)=>{
+          const boxTop = box.getBoundingClientRect().top;
+          const triggerPoint = window.innerHeight*0.8;
+          if(boxTop < triggerPoint){
+            box.classList.add("show");
+          }
+        })
+      })    
     </script>
   </body>
 </html>

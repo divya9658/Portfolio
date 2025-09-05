@@ -6,6 +6,7 @@
 }
 body{
     background-color: rgba(139, 115, 227, 0.256);
+    max-width:100%;
     padding: 30px 20px;
 }
 .header{
@@ -17,6 +18,7 @@ body{
 .Namelogo{
     font-family: cursive;
     font-size: 26px;
+    padding: 15px 20px;
 }
 .nav-links{
     display: flex;
@@ -29,9 +31,9 @@ body{
     display: inline-block;
     text-decoration: none;
     color: black;
-    padding: 15px 30px;
+    padding: 10px 20px;
     box-sizing: border-box;
-    border-radius: 40px;
+    border-radius: 20px;
     transition: background-color 0.1s linear;
 }
 .nav-links ul li a:hover{
@@ -47,6 +49,26 @@ span{
     display: none;
     font-size: 24px;
 }
+.intro{
+    animation: slideUp 0.7s ease-in forwards;
+    transform: translateY(10%);
+    opacity:0;
+}
+.intro h3{
+    color: rgba(92, 10, 133, 0.759);
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+@keyframes slideUp{
+    from{
+        transform: translateY(10%);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -58,32 +80,53 @@ span{
     width: 100%;
     height: 100%;
 }
-.image1{
-    width: 100%;
-    min-height: 500px;
-    background-image: url(./images/image1_girl.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 15px 20px;
-}
-.content{
+.image{
     display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+}
+.image2{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-right: 30px;
+}
+.image1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 10px groove blueviolet;
+    overflow: hidden;
+}
+.image1 img{
+    width: 500px;
+    height: 600px;
+    object-fit: fill;
+    background-position: center;
+}
+.content, .content1{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: center;
+    align-items: start;
     gap: 30px;
 }
+.content{
+    padding: 50px;
+}
 .content h1{
-    font-size: 46px;
+    font-size: 50px;
     color:rgb(79, 20, 135);
     font-family: 'Montserrat', sans-serif;
 }
-.content p{
+.content p, .About p{
     color: rgba(0, 0, 0, 0.627);
     line-height: 2;
+    text-align: justify;
 }
 .content ul{
     display: flex;
@@ -93,20 +136,104 @@ span{
 .content ul li i:hover{
     color: blueviolet;
 }
-.About{
+.About, .Skills{
     width: 100%;
-    height: 100svh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 60px;
+}
+.About{
+    margin-top: 40px;
+    opacity:0;
+    transform: translateY(10%);
+    transition: all 0.8s ease;
+}
+.About.show{
+    opacity:1;
+    transform: translateY(0);
+}
+.Skills{
+    margin-top: 10px;
+    padding-top: 40px;
+}
+.skill-head{
+    margin-bottom: 30px;
+}
+.About h1, .Skills h1{
+    font-size: 40px;
+    color: rgb(79, 20, 135);
+}
+.About p{
+    margin-top: 30px;
+}
+.grid-container1{
+    width: 100%;
+    height:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container1 .s{
+    display: flex;
+    border: 2px solid blueviolet;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 20px;
+    transition: background-color 0.4s ease;
+}
+.s:hover{
+    background-color: rgba(74, 8, 118, 0.795);
+    color: white;
+}
+.grid-container1 .s .languages, .language1, .language2, .language3, .language4, .language5{
+    width: 50px;
+    height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    align-items: center;
 }
-.About h1{
-    font-size: 40px;
+.languages img, .language1 img{
+    width: 40px;
+    height: 50px;
+}
+.language2 img{
+    width: 50px;
+    height: 50px;
+}
+.language3 img{
+    width: 45px;
+}
+.language4 img{
+    width: 50px;
+    height: 50px;
+}
+.language5 img{
+    width: 40px;
+    height: 50px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
 }
 @media (max-width: 770px){
+    .About{
+        padding: 30px;
+    }
     .Namelogo{
         display: block;
         font-size: clamp(1.2rem, 3vw, 3rem);
+        padding: 10px 15px;
     }
     .nav-links{
         display: flex;
@@ -145,7 +272,39 @@ span{
     .grid-container{
         grid-template-columns: 1fr;
     }
+    .grid-container1{
+        grid-template-columns: 1fr;
+    }
+    .content1 h1{
+        margin-top: 50px;
+    }
+    .content1 p{
+        margin-top: -10px;
+    }
+    .image2{
+        padding-right:0px;
+        justify-content: center;
+    }
+}
+@media(max-width: 430px){
+    .About, .Skills{
+        padding: 15px 20px;
+    }
+    .content{
+        padding: 20px;
+    }
     .image1{
-        height: 250px;
+        width: 200px;
+        height: 200px;
+    }
+    .image1 img{
+        width: 200px;
+        height: 300px;
+    }
+    .img{
+        display: none;
+    }
+    .content1 h1{
+        margin-top: -10px;
     }
 }
