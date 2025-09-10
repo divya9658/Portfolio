@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience-Divyateja</title>
-    <link rel="stylesheet" href="./Experience.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyateja-Contact</title>
+    <link rel="stylesheet" href="./Contact.css">
+</head>
+<body>
     <section class="header">
       <div class="Namelogo">&lt; Divyateja Konathala /&gt;</div>
       <button id="darkModeToggle" class="dark-toggle">🌙</button>
@@ -22,59 +22,36 @@
       </nav>
       <div onclick="Open()" class="menu-icon">&#9776;</div>
     </section>
-    <section class="intro">
-      <div class="grid-container">
-        <div class="content">
-          <h1>Experience</h1>
-          <p>
-            This page showcases my professional experiences, where I have
-            applied technical skills, learned industry practices, and worked on
-            real-world projects that contributed to my growth as a
-            developer.Every experience has shaped my journey as a learner and
-            developer. This section reflects the opportunities I’ve had to grow,
-            contribute, and explore new technologies.
-          </p>
+    <section class="contact">
+    <h1>Get in Touch</h1>
+    <p>I'd love to hear from you! Fill out the form or connect with me on socials.</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+        <p><strong>Email:</strong> <a href="mailto:divyateja9658@gmail.com">divyateja9658@gmail.com</a></p>
+        <p><strong>Location:</strong> Andhra Pradesh, India</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/divyateja-konathala-3404b72b6/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/divya9658" target="_blank">GitHub</a>
+          <a href="https://leetcode.com/u/Divyateja9658/" target="_blank">Leetcode</a>
+          <a href="https://www.geeksforgeeks.org/user/divyateja9658/" target="_blank">GeeksforGeeks</a>
+          <a href="https://www.codechef.com/users/divyateja9658" target="_blank">Codechef</a>
+          <a href="https://www.hackerrank.com/profile/divyateja9658" target="_blank">Hackerrank</a>
         </div>
-        <div class="image">
-          <img src="./images/experience.png" alt="" />
-        </div>
       </div>
-    </section>
-    <section class="experience1">
-      <div class="logo">
-        <img src="./images/iship.png" alt="">
-      </div>
-      <div class="experience">
-        <h1>Intern</h1>
-        <h2>Technical Hub</h2>
-        <p><span class="duration">Duration:</span> May - June 2025</p>
-        <ul type="none">
-          <li>
-            &#11088; Gained hands-on experience in web development through
-            project-based learning.
-          </li>
-          <li>
-            &#11088; Built and deployed a responsive website using HTML, CSS,
-            and JavaScript.
-          </li>
-          <li>
-            &#11088; Improved team collaboration by using Git & GitHub for
-            version control.
-          </li>
-          <li>
-            &#11088; Enhanced problem-solving skills by working on real-world
-            case studies.
-          </li>
-          <li>
-            &#11088; Developed strong communication and teamwork skills during
-            collaborative tasks.
-          </li>
-        </ul>
-      </div>
-    </section>
-    <footer>
-      <p>Made with ❤️ by Divyateja</p>
-    </footer>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>Made with ❤️ by Divyateja</p>
+  </footer>
     <script>
       function fun(event) {
         console.log(event);
@@ -120,5 +97,5 @@
         }
       });
     </script>
-  </body>
+</body>
 </html>
