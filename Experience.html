@@ -1,48 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience-Divyateja</title>
-    <link rel="stylesheet" href="./Experience.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./Experience.css" />
+  </head>
+  <body>
     <section class="header">
       <div class="Namelogo">&lt; Divyateja Konathala /&gt;</div>
+      <button id="darkModeToggle" class="dark-toggle">🌙</button>
       <nav class="nav-links" id="nav-links">
-          <span class="cross" onclick = "Close()">&times;</span>
-          <ul type="none">
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./Education.html" target="_blank">Education</a></li>
-            <li><a href="./Experience.html" target="_blank">Experience</a></li>
-            <li><a href="#" target="_blank">Projects</a></li>
-            <li><a href="#" target="_blank">Contact</a></li>
-          </ul>
+        <span class="cross" onclick="Close()">&times;</span>
+        <ul type="none">
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./Education.html" target="_blank">Education</a></li>
+          <li><a href="./Experience.html" target="_blank">Experience</a></li>
+          <li><a href="./Projects.html" target="_blank">Projects</a></li>
+          <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
       </nav>
       <div onclick="Open()" class="menu-icon">&#9776;</div>
     </section>
     <section class="intro">
       <div class="grid-container">
-        <div class="image">
-          <div class="image1">
-            <img src="./images/Edu_Image.png" alt="">
-          </div>
-        </div>
         <div class="content">
-          <h1>Academic Journey</h1>
-          <div class="resume">
-            <div><a href="./M4_resume.pdf" download="My_Resume.pdf" class="resume-download"><i class="fa-solid fa-download"></i> Download Resume</a></div>
-            <div><a href="./M4_resume.pdf" target="_blank" class="resume-view">view>></a></div>
-          </div>
-          <p>This page highlights my educational journey, showcasing the academic milestones
-             that have shaped my skills and knowledge. 
-             From formal schooling to higher education and specialized certifications, 
-             each step has contributed to building a strong foundation in both technical and personal growth. 
-             Here, you’ll find details of my qualifications, achievements, 
-             and the learning experiences that have guided me toward my career goals.
+          <h1>Experience</h1>
+          <p>
+            This page showcases my professional experiences, where I have
+            applied technical skills, learned industry practices, and worked on
+            real-world projects that contributed to my growth as a
+            developer.Every experience has shaped my journey as a learner and
+            developer. This section reflects the opportunities I’ve had to grow,
+            contribute, and explore new technologies.
           </p>
+        </div>
+        <div class="image">
+          <img src="./images/experience.png" alt="" />
         </div>
       </div>
     </section>
-</body>
+    <section class="experience1">
+      <div class="logo">
+        <img src="./images/iship.png" alt="">
+      </div>
+      <div class="experience">
+        <h1>Intern</h1>
+        <h2>Technical Hub</h2>
+        <p><span class="duration">Duration:</span> May - June 2025</p>
+        <ul type="none">
+          <li>
+            &#11088; Gained hands-on experience in web development through
+            project-based learning.
+          </li>
+          <li>
+            &#11088; Built and deployed a responsive website using HTML, CSS,
+            and JavaScript.
+          </li>
+          <li>
+            &#11088; Improved team collaboration by using Git & GitHub for
+            version control.
+          </li>
+          <li>
+            &#11088; Enhanced problem-solving skills by working on real-world
+            case studies.
+          </li>
+          <li>
+            &#11088; Developed strong communication and teamwork skills during
+            collaborative tasks.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <p>Made with ❤️ by Divyateja</p>
+    </footer>
+    <script>
+      function fun(event) {
+        console.log(event);
+        const Circle = document.getElementById("circle");
+        const x = event.clientX;
+        const y = event.clientY;
+        Circle.style.left = x - 25 + "px";
+        Circle.style.top = y - 25 + "px";
+      }
+      function Open() {
+        document.getElementsByClassName("nav-links")[0].style = "right:0px;";
+      }
+      function Close() {
+        document.getElementsByClassName("nav-links")[0].style = "right:-350px;";
+      }
+      window.addEventListener("scroll", function () {
+        const boxes = document.querySelectorAll(".About");
+        boxes.forEach((box) => {
+          const boxTop = box.getBoundingClientRect().top;
+          const triggerPoint = window.innerHeight * 0.8;
+          if (boxTop < triggerPoint) {
+            box.classList.add("show");
+          }
+        });
+      });
+      const toggleBtn = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙";
+        }
+      });
+    </script>
+  </body>
 </html>

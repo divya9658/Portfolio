@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyateja-Projects</title>
+    <link rel="stylesheet" href="./Projects.css">
+</head>
+<body>
+    <section class="header">
+      <div class="Namelogo">&lt; Divyateja Konathala /&gt;</div>
+      <button id="darkModeToggle" class="dark-toggle">🌙</button>
+      <nav class="nav-links" id="nav-links">
+        <span class="cross" onclick="Close()">&times;</span>
+        <ul type="none">
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./Education.html" target="_blank">Education</a></li>
+          <li><a href="./Experience.html" target="_blank">Experience</a></li>
+          <li><a href="#" target="_blank">Projects</a></li>
+          <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
+      </nav>
+      <div onclick="Open()" class="menu-icon">&#9776;</div>
+    </section>
+    <section class="intro">
+        <div class="grid-container">
+            <div class="logo">
+                <img src="./images/Projects.png" alt="">
+            </div>
+            <div class="content">
+                <h1>Projects</h1>
+                <p>Here are some of the projects I have worked on, 
+                    showcasing my skills in software development, problem-solving, and applying concepts to real-world applications. 
+                    Each project reflects my interest in building efficient, user-friendly, and impactful solutions.</p>
+            </div>
+        </div>
+    </section>
+    <div class="projects-grid">
+      <div class="project">
+        <div class="image">
+          <img src="" alt="">
+        </div>
+        <div class="name">SJ-Connect</div>
+        <div class="tags">
+          <ul type="none">
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="description">
+          A Senior-Junior interacting website where the juniors can anonymously ask their doubts and seniors can 
+answer them anonymously. There are multiple sections in this website like announcements where 
+juniors can encounter the internship opportunities, senior experiences and different kinds of communities to join & 
+follow their passion.
+        </div>
+      </div>
+      <div class="project">
+        <div class="image">
+          <img src="" alt="">
+        </div>
+        <div class="name">Responsive Portfolio</div>
+        <div class="tags">
+          <ul type="none">
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="description">
+          A responsive portfolio built with HTML, CSS, and JavaScript
+          is an interactive website designed to showcase professional projects, skills, and 
+          experiences while adapting smoothly to devices of varying sizes, such as desktops, tablets, and smartphones.
+        </div>
+      </div>
+      <div class="project">
+        <div class="image">
+          <img src="" alt="">
+        </div>
+        <div class="name">Python Mini Projects</div>
+        <div class="tags">
+          <ul type="none">
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="description">
+          Projects are developed using the programming language called Python.
+          It demonstrates practical coding skills, problem-solving ability, and proficiency with Python fundamentals and libraries.
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Made with ❤️ by Divyateja</p>
+    </footer>
+    <script>
+      function fun(event) {
+        console.log(event);
+        const Circle = document.getElementById("circle");
+        const x = event.clientX;
+        const y = event.clientY;
+        Circle.style.left = x - 25 + "px";
+        Circle.style.top = y - 25 + "px";
+      }
+      function Open() {
+        document.getElementsByClassName("nav-links")[0].style = "right:0px;";
+      }
+      function Close() {
+        document.getElementsByClassName("nav-links")[0].style = "right:-350px;";
+      }
+      window.addEventListener("scroll", function () {
+        const boxes = document.querySelectorAll(".About");
+        boxes.forEach((box) => {
+          const boxTop = box.getBoundingClientRect().top;
+          const triggerPoint = window.innerHeight * 0.8;
+          if (boxTop < triggerPoint) {
+            box.classList.add("show");
+          }
+        });
+      });
+      const toggleBtn = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙";
+        }
+      });
+    </script>
+</body>
+</html>

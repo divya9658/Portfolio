@@ -10,13 +10,14 @@
 <body>
     <section class="header">
       <div class="Namelogo">&lt; Divyateja Konathala /&gt;</div>
+      <button id="darkModeToggle" class="dark-toggle">🌙</button>
       <nav class="nav-links" id="nav-links">
           <span class="cross" onclick = "Close()">&times;</span>
           <ul type="none">
             <li><a href="./home.html">Home</a></li>
             <li><a href="./Education.html" target="_blank">Education</a></li>
             <li><a href="./Experience.html" target="_blank">Experience</a></li>
-            <li><a href="#" target="_blank">Projects</a></li>
+            <li><a href="./Projects.html" target="_blank">Projects</a></li>
             <li><a href="#" target="_blank">Contact</a></li>
           </ul>
       </nav>
@@ -182,7 +183,26 @@
             box.classList.add("show");
           }
         })
-      })    
+      })   
+      const toggleBtn = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙";
+        }
+      }); 
     </script>
 </body>
 </html>

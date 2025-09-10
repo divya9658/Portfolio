@@ -1,5 +1,26 @@
+:root {
+  --bg-color: rgba(139, 115, 227, 0.256);
+  --text-color: #000;
+  --heading-color: rgb(79, 20, 135);
+  --link-hover-bg: blueviolet;
+  --link-hover-text: #fff;
+  --card-border: blueviolet;
+  --footer-bg: rgba(72, 29, 135, 0.1);
+  --footer-text: rgba(0, 0, 0, 0.7);
+}
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --heading-color: #d6b6ff;
+  --link-hover-bg: #6a0dad;
+  --link-hover-text: #fff;
+  --card-border: #a855f7;
+  --footer-bg: #1e1e1e;
+  --footer-text: #aaa;
+}
 body{
-    background-color: rgba(139, 115, 227, 0.256);
+    background-color:var(--bg-color);
+    color: var(--text-color);
     max-width:100%;
     padding: 30px 20px;
 }
@@ -8,6 +29,17 @@ body{
     padding:0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.dark-toggle {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+.dark-toggle:hover {
+  transform: scale(1.2);
 }
 .header{
     position: relative;
@@ -30,15 +62,15 @@ body{
 .nav-links ul li a{
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 20px;
     transition: background-color 0.1s linear;
 }
 .nav-links ul li a:hover{
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--link-hover-bg);
+    color: var(--link-hover-text);
 }
 .menu-icon{
     display: none;
@@ -51,7 +83,7 @@ body{
     opacity:0;
 }
 .intro h3{
-    color: rgba(92, 10, 133, 0.759);
+    color: var(--heading-color);
     letter-spacing: 1px;
     font-size: 22px;
 }
@@ -112,11 +144,11 @@ body{
 }
 .content h1{
     font-size: 50px;
-    color:rgb(79, 20, 135);
+    color:var(--heading-color);
     font-family: 'Montserrat', sans-serif;
 }
 .content p, .grid-container1 div p{
-    color: rgba(0, 0, 0, 0.627);
+    color: var(--text-color);
     line-height: 2;
     text-align: justify;
 }
@@ -126,24 +158,28 @@ body{
 }
 .resume-download{
     padding: 10px 15px;
-    background-color: blueviolet;
+    background-color: var(--link-hover-bg);
     border-radius: 8px;
     color: white;
-    border: 2px solid blueviolet;
+    border: 2px solid var(--link-hover-bg);
 }
 .resume-download, .resume-view{
     text-decoration: none;
     font-weight: bold;
 }
 .resume-view{
-    color: blueviolet;
+    color: var(--link-hover-bg);
 }
 .resume-download:hover, .resume-view:hover{
-    background-color: rgba(139, 115, 227, 0.256);
-    color: blueviolet;
+    background-color: var(--bg-color);
+    color: var(--link-hover-bg);
 }
 .education{
     padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .grid-container1{
     display: grid;
@@ -157,20 +193,20 @@ body{
     align-items: start;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px rgba(139, 115, 227, 0.256);
+    box-shadow: 0px 0px 10px 3px var(--bg-color);
 }
 .grid-container1 div p{
     text-align: justify;
 }
 .grid-container1 div h1, .grid-container1 div h3{
-    color: rgb(79, 20, 135);
+    color: var(--heading-color);
     font-weight: bold;
     line-height: 2;
 }
 .change{
     display: inline-block;
     font-size: 20px;
-    color:rgb(79, 20, 135);
+    color:var(--heading-color);
     line-height: 2;
 }
 .certifications{
@@ -178,7 +214,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(79, 20, 135);
+    color: var(--heading-color);
 }
 .certifications h1{
     font-size: 40px;
@@ -198,7 +234,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 10px 2px rgba(139, 115, 227, 0.256);
+    box-shadow: 0px 0px 10px 2px var(--bg-color);
     padding: 10px;
     border-radius: 8px;
     text-align: center;
@@ -208,15 +244,19 @@ body{
     transition: background-color 0.3s ease-out;
 }
 .c:hover{
-    background-color: rgba(74, 53, 126,0.9);
-    color: white;
+    background-color: var(--heading-color);
+    color: var(--bg-color);
 }
 footer{
-    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 15px;
+    padding: 15px;
+    margin-top: 50px;
+    background: var(--footer-bg);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--footer-text);
 }
 @media(max-width:770px){
     .Namelogo{
@@ -270,6 +310,10 @@ footer{
     }
     .grid-container2{
         grid-template-columns: 1fr 1fr;
+    }
+    .cross{
+        display: block;
+        font-size: 30px;
     }
 }
 @media (max-width: 430px){
