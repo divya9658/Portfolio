@@ -7,6 +7,7 @@
   --card-border: blueviolet;
   --footer-bg: rgba(72, 29, 135, 0.1);
   --footer-text: rgba(0, 0, 0, 0.7);
+  --view-color: #fff;
 }
 .dark-mode {
   --bg-color: #121212;
@@ -17,17 +18,7 @@
   --card-border: #a855f7;
   --footer-bg: #1e1e1e;
   --footer-text: #aaa;
-}
-.dark-toggle {
-  border: none;
-  background: transparent;
-  font-size: 24px;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-.dark-toggle:hover {
-  transform: scale(1.2);
+  --view-color: black;
 }
 *{
     margin:0;
@@ -40,6 +31,17 @@ body{
     color: var(--text-color);
     max-width:100%;
     padding: 30px 20px;
+}
+.dark-toggle {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+.dark-toggle:hover {
+  transform: scale(1.2);
 }
 .header{
     position: relative;
@@ -69,8 +71,8 @@ body{
     transition: background-color 0.1s linear;
 }
 .nav-links ul li a:hover{
-    background-color: var(--heading-color);
-    color: white;
+    background-color: var(--link-hover-bg);
+    color: var(--link-hover-text);
 }
 .menu-icon{
     display: none;
@@ -159,7 +161,6 @@ span{
 .project{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: start;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 1px var(--heading-color);
@@ -187,7 +188,7 @@ span{
     border-radius: 7px;
     transition: all 0.3s ease;
 }
-li:hover{
+.tags ul li:hover{
     background-color: var(--heading-color);
     color: var(--link-hover-text);
     border-color: var(--heading-color);
@@ -204,7 +205,7 @@ button{
 }
 button a{
     text-decoration: none;
-    color: var(--bg-color);
+    color: var(--view-color);
     cursor: pointer;
 }
 footer{
