@@ -7,6 +7,7 @@
   --card-border: blueviolet;
   --footer-bg: rgba(72, 29, 135, 0.1);
   --footer-text: rgba(0, 0, 0, 0.7);
+  --view-color: rgb(79,20,135);
 }
 .dark-mode {
   --bg-color: #121212;
@@ -29,57 +30,58 @@
 .dark-toggle:hover {
   transform: scale(1.2);
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    max-width:100%;
-    padding: 30px 20px;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 100%;
+  padding: 30px 20px;
 }
-.header{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.Namelogo{
-    font-family: cursive;
-    font-size: 26px;
-    padding: 15px 20px;
+.Namelogo {
+  font-family: cursive;
+  font-size: 26px;
+  padding: 15px 20px;
 }
-.nav-links{
-    display: flex;
+.nav-links {
+  display: flex;
 }
-.nav-links ul{
-    display: flex;
-    justify-content: end;
+.nav-links ul {
+  display: flex;
+  justify-content: end;
 }
-.nav-links ul li a{
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    transition: background-color 0.1s linear;
+.nav-links ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--view-color);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: background-color 0.1s linear;
 }
-.nav-links ul li a:hover{
-    background-color: var(--heading-color);
-    color: white;
+.nav-links ul li a:hover {
+  background-color: var(--link-hover-bg);
+  color: white;
 }
-.menu-icon{
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
-span{
-    display: none;
-    font-size: 24px;
+span {
+  display: none;
+  font-size: 24px;
 }
 .contact {
   text-align: center;
@@ -113,8 +115,13 @@ span{
   color: var(--heading-color);
   margin-bottom: 20px;
 }
-.contact-info p { margin-bottom: 10px; }
-.contact-info a { color: var(--heading-color); text-decoration: none; }
+.contact-info p {
+  margin-bottom: 10px;
+}
+.contact-info a {
+  color: var(--heading-color);
+  text-decoration: none;
+}
 .socials a {
   display: inline-block;
   margin-right: 15px;
@@ -122,7 +129,9 @@ span{
   color: var(--text-color);
   transition: color 0.3s;
 }
-.socials a:hover { color: var(--link-hover-bg); }
+.socials a:hover {
+  color: var(--link-hover-bg);
+}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -139,14 +148,16 @@ span{
 }
 .contact-form button {
   background: var(--heading-color);
-  color: white;
+  color: whitesmoke;
   border: none;
   padding: 12px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
 }
-.contact-form button:hover { background: var(--link-hover-bg); }
+.contact-form button:hover {
+  background: var(--link-hover-bg);
+}
 
 footer {
   text-align: center;
@@ -157,7 +168,7 @@ footer {
   font-size: 14px;
   color: var(--footer-text);
 }
-@media(max-width: 770px) {
+@media (max-width: 770px) {
   .nav-links {
     flex-direction: column;
     position: fixed;
@@ -165,7 +176,7 @@ footer {
     top: 0;
     width: 300px;
     height: 100svh;
-    background-color: var(--heading-color);
+    background-color: rgb(203, 172, 231);
     padding: 15px 30px;
     transition: right 0.4s ease-out;
     border-radius: 8px 0 0 8px;
@@ -176,11 +187,20 @@ footer {
     gap: 30px;
     margin-top: 30px;
   }
-  .menu-icon { display: block; }
-  span { display: block; }
+  .menu-icon {
+    display: block;
+  }
+  span {
+    display: block;
+    color: var(--view-color);
+    font-size:30px;
+    cursor: pointer;
+  }
   .contact-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .contact-info { text-align: center; }
+  .contact-info {
+    text-align: center;
+  }
 }

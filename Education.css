@@ -7,7 +7,7 @@
   --card-border: blueviolet;
   --footer-bg: rgba(72, 29, 135, 0.1);
   --footer-text: rgba(0, 0, 0, 0.7);
-  --view-color: blueviolet;
+  --view-color: rgb(79,20,135);
 }
 .dark-mode {
   --bg-color: #121212;
@@ -18,7 +18,6 @@
   --card-border: #a855f7;
   --footer-bg: #1e1e1e;
   --footer-text: #aaa;
-  --view-color: whitesmoke;
 }
 body{
     background-color:var(--bg-color);
@@ -64,7 +63,7 @@ body{
 .nav-links ul li a{
     display: inline-block;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--view-color);
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -289,9 +288,6 @@ footer{
         gap: 30px;
         margin-top: 30px;
     }
-    .nav-links ul li a{
-        border-radius: 10px;
-    }
     .menu-icon{
         display: block;
         font-size: 30px;
@@ -302,6 +298,7 @@ footer{
         display: block;
         font-size: 30px;
         cursor: pointer;
+        color: var(--view-color);
     }
     .grid-container, .grid-container1{
         grid-template-columns: 1fr;
