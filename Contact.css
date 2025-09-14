@@ -64,7 +64,7 @@ body {
 .nav-links ul li a {
   display: inline-block;
   text-decoration: none;
-  color: var(--view-color);
+  color: whitesmoke;
   padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 20px;
@@ -147,7 +147,7 @@ span {
   color: var(--text-color);
 }
 .contact-form button {
-  background: var(--heading-color);
+  background: var(--link-hover-bg);
   color: whitesmoke;
   border: none;
   padding: 12px;
@@ -156,7 +156,8 @@ span {
   transition: background 0.3s;
 }
 .contact-form button:hover {
-  background: var(--link-hover-bg);
+  background: var(--heading-color);
+  color: whitesmoke;
 }
 
 footer {
@@ -186,6 +187,9 @@ footer {
     flex-direction: column;
     gap: 30px;
     margin-top: 30px;
+  }
+  .nav-links ul li a{
+    color: var(--view-color);
   }
   .menu-icon {
     display: block;

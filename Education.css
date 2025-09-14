@@ -18,6 +18,7 @@
   --card-border: #a855f7;
   --footer-bg: #1e1e1e;
   --footer-text: #aaa;
+  --view-color: whitesmoke;
 }
 body{
     background-color:var(--bg-color);
@@ -245,11 +246,11 @@ body{
     transition: background-color 0.3s ease-out;
 }
 .c .text{
-    color: var(--view-color);
+    color: rgb(79, 20, 135);
 }
 .c:hover{
-    background-color: var(--heading-color);
-    color: var(--bg-color);
+    background-color: var(--link-hover-bg);
+    color: rgba(72, 29, 135, 0.1);
 }
 footer{
     display: flex;
@@ -288,6 +289,9 @@ footer{
         gap: 30px;
         margin-top: 30px;
     }
+    .nav-links ul li a{
+        color: rgb(79,20,135);
+    }
     .menu-icon{
         display: block;
         font-size: 30px;
@@ -298,7 +302,7 @@ footer{
         display: block;
         font-size: 30px;
         cursor: pointer;
-        color: var(--view-color);
+        color: rgb(79,20,135);
     }
     .grid-container, .grid-container1{
         grid-template-columns: 1fr;
