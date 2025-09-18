@@ -64,7 +64,7 @@ body {
 .nav-links ul li a {
   display: inline-block;
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--text-color);
   padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 20px;
@@ -188,15 +188,11 @@ footer {
     gap: 30px;
     margin-top: 30px;
   }
-  .nav-links ul li a{
-    color: var(--view-color);
-  }
   .menu-icon {
     display: block;
   }
   span {
     display: block;
-    color: var(--view-color);
     font-size:30px;
     cursor: pointer;
   }
