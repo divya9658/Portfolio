@@ -250,7 +250,7 @@ body{
 }
 .c:hover{
     background-color: var(--link-hover-bg);
-    color: rgba(72, 29, 135, 0.1);
+    color: var(--link-hover-text);
 }
 footer{
     display: flex;
