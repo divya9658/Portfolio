@@ -245,8 +245,8 @@ body{
     font-weight: bold;
     transition: background-color 0.3s ease-out;
 }
-.c .text{
-    color: rgb(79, 20, 135);
+.c {
+    color: var(--text-color);
 }
 .c:hover{
     background-color: var(--link-hover-bg);
