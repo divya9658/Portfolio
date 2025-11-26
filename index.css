@@ -136,7 +136,7 @@ span{
 .image1 img{
     width: 500px;
     height: 600px;
-    object-fit: fill;
+    /* object-fit: fill; */
     background-position: center;
 }
 .content, .content1{
